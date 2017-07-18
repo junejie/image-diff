@@ -1,0 +1,10 @@
+.Python
+*.swp
+*.rope*
+bin
+include
+lib
+diff
+dest
+src
+pip*.json
