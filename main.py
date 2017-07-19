@@ -18,9 +18,9 @@ class Diff(object):
 
     def trace(self):
 
-        for filename in os.listdir(self.source):
-            file_ = self.source + '/' + filename
-            otherFile_ = self.otherSource + '/' + filename
+        for filename_ in os.listdir(self.source):
+            file_ = self.source + '/' + filename_
+            otherFile_ = self.otherSource + '/' + filename_
             filename, file_extension = os.path.splitext(file_)
             if file_extension == '.png':
 
@@ -38,7 +38,7 @@ class Diff(object):
                                              '-compose', 'src',
                                              '-metric', 'AE', file_,
                                              otherFile_,
-                                             self.diff + '/' + filename],
+                                             self.diff + '/' + filename_],
                                             stdout=devnull, stderr=devnull)
                 else:
                     print('skip', otherFile_)
